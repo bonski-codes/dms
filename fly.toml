@@ -24,6 +24,11 @@ console_command = "php /var/www/html/artisan tinker"
   DB_DATABASE="dms"
   MYSQL_ATTR_SSL_CA="/etc/ssl/certs/ca-certificates.crt"
 
+[[services.ports]]
+  handlers = ["http"]
+  port = 80
+  force_https = true
+
 [http_service]
   internal_port = 8080
   force_https = true
